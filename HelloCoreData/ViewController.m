@@ -27,7 +27,7 @@
 
 }
 
-// 增
+// 增加
 - (IBAction)coreDataAdd:(id)sender {
     
     // 创建操作实体类
@@ -50,7 +50,7 @@
     }
 }
 
-// 删
+// 删除
 - (IBAction)coreDataDelete:(id)sender {
     
     // 读取这个类
@@ -80,7 +80,7 @@
     }
 }
 
-// 改
+// 修改
 - (IBAction)coreDataUpdate:(id)sender {
     //读取这个类
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:app.managedObjectContext];
@@ -107,7 +107,7 @@
     }
 }
 
-// 查
+// 查看
 - (IBAction)coreDataSelect:(id)sender {
     // 读取这个类, 根据key查找
     NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass([Person class]) inManagedObjectContext:app.managedObjectContext];
