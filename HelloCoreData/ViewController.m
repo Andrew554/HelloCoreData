@@ -33,6 +33,10 @@
     // 创建操作实体类
     Person *person  = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:app.managedObjectContext];
     
+    // 或者
+//    NSEntityDescription *entityDes = [NSEntityDescription entityForName:NSStringFromClass([Person class]) inManagedObjectContext:app.managedObjectContext];
+//    Person *p = [[NSManagedObject alloc] initWithEntity:entityDes insertIntoManagedObjectContext:app.managedObjectContext];
+    
     u_int32_t ID = arc4random_uniform(10);
     person.name = [NSString stringWithFormat:@"小屁孩%zd", ID];
     person.sex = (ID%2 == 0) ? @"男" : @"女";
